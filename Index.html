@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>وزارة الزراعة الأردنية</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="icon.png" alt="شعار الوزارة" class="logo">
+    <h1>وزارة الزراعة الأردنية</h1>
+    <div class="header-buttons">
+      <button id="langToggle">English</button>
+      <button id="themeToggle">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- تسجيل الدخول -->
+    <section id="loginSection" class="card">
+      <h2>تسجيل الدخول</h2>
+      <input type="text" id="loginInput" placeholder="البريد الإلكتروني أو الهاتف">
+      <button onclick="login()">إرسال رابط الدخول</button>
+    </section>
+
+    <!-- المساعد الذكي -->
+    <section id="assistant" class="card">
+      <h2>المساعد الذكي</h2>
+      <div id="chatBox"></div>
+      <input type="text" id="userMessage" placeholder="اكتب رسالتك...">
+      <div class="assistant-buttons">
+        <button onclick="sendMessage()">إرسال</button>
+        <button onclick="startVoice()">🎤</button>
+      </div>
+    </section>
+
+    <!-- طلبات التراخيص -->
+    <section id="licenses" class="card">
+      <h2>طلبات التراخيص</h2>
+      <input type="file" id="docUpload">
+      <button onclick="submitLicense()">تقديم الطلب</button>
+    </section>
+
+    <!-- المتجر -->
+    <section id="store" class="card">
+      <h2>المتجر</h2>
+      <div id="products"></div>
+      <h3>سلة المشتريات</h3>
+      <ul id="cart"></ul>
+      <button onclick="checkout()">الدفع</button>
+    </section>
+
+    <!-- الملف الشخصي -->
+    <section id="profile" class="card">
+      <h2>الملف الشخصي</h2>
+      <input type="text" placeholder="الاسم">
+      <input type="text" placeholder="الرقم الوطني">
+      <input type="text" placeholder="رقم الهاتف">
+      <input type="text" placeholder="مكان الإقامة">
+      <select>
+        <option>نباتي</option>
+        <option>حيواني</option>
+      </select>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
